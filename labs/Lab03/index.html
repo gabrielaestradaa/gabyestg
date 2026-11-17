@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Parking - Tec de Monterrey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1> Smart Parking</h1>
+  <small>Tec de Monterrey - Campus Querétaro</small>
+</header>
+
+<div class="contenedor">
+  <div id="mapa"></div>
+
+  <div class="panel">
+    <h2>Panel de control</h2>
+    <div class="dato"><span>Total</span><b id="total">0</b></div>
+    <div class="dato"><span>Ocupados</span><b id="ocupados" style="color:#ff5a5f">0</b></div>
+    <div class="dato"><span>Disponibles</span><b id="disponibles" style="color:#00a08a">0</b></div>
+    <div class="dato"><span>Ocupación</span><b id="porcentaje">0%</b></div>
+    <div class="barra"><div id="relleno"></div></div>
+    <p class="chico">Última lectura de sensores: <span id="hora">-</span></p>
+    <p class="chico">🟦 Disponible &nbsp; 🟥 Ocupado<br>Haz clic en un cajón para cambiarlo.</p>
+    <button onclick="reiniciar()">Reiniciar sensores</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
