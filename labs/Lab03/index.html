@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Parking - Tec de Monterrey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Parking</h1>
+  <small>Tec de Monterrey - Campus Querétaro</small>
+</header>
+
+<main>
+  <section class="mapa">
+    <svg id="svg" viewBox="0 0 1522 1256">
+      <image href="parking.png" width="1522" height="1256"/>
+      <g id="cajones"></g>
+    </svg>
+  </section>
+
+  <aside>
+    <div class="tarjetas">
+      <div class="tarjeta"><span>Total</span><b id="total">0</b></div>
+      <div class="tarjeta"><span>Ocupación</span><b id="porcentaje">0%</b></div>
+      <div class="tarjeta rojo"><span>Ocupados</span><b id="ocupados">0</b></div>
+      <div class="tarjeta verde"><span>Disponibles</span><b id="disponibles">0</b></div>
+    </div>
+
+    <div class="caja">
+      <div class="barra"><div id="relleno"></div></div>
+      <p class="chico">Última lectura de sensores: <b id="hora">-</b></p>
+    </div>
+
+    <div class="caja">
+      <p class="chico"><span class="punto libre"></span> Disponible &nbsp;
+         <span class="punto ocupado"></span> Ocupado</p>
+      <p class="chico">Haz clic en un cajón para cambiar su estado.</p>
+      <button onclick="reiniciar()">Reiniciar sensores</button>
+    </div>
+  </aside>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
